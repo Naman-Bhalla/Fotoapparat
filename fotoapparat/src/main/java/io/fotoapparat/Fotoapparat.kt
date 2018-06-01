@@ -120,6 +120,10 @@ class Fotoapparat
         return PhotoResult.fromFuture(future, logger)
     }
 
+    fun getDeviceInstance(): CameraDevice {
+        return device.getSelectedCamera()
+    }
+
     /**
      * Provides camera capabilities asynchronously, returns immediately.
      *
